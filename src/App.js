@@ -1,9 +1,9 @@
-import Todo1 from "./components/todo1";
+import Todo2 from "./components/todo2";
 
 function App() {
   return (
     <div>
-      <Todo1></Todo1>
+      <Todo2></Todo2>
     </div>
   );
 }
