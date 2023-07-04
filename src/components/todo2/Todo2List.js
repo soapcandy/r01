@@ -3,7 +3,7 @@ import { getList } from "../../api/todoAPI";
 
 const initState = { dtoList: [] }
 
-const Todo2List = ({changeView}) => {
+const Todo2List = ({ changeView }) => {
 
     const [data, setData] = useState(initState)
 
@@ -21,7 +21,12 @@ const Todo2List = ({changeView}) => {
                 Todo2 List
             </div>
             <ul>
-                {data.dtoList.map(todo => <li key={todo.tno}>{todo.title}</li>)}
+                {data.dtoList.map(todo =>
+                    <li
+                        key={todo.tno}
+                        onClick={() => changeView('read', todo.tno)}>
+                        {todo.title}
+                    </li>)}
             </ul>
         </div>
     );
